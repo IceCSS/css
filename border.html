@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <style>
+            .control-btn {
+                font-weight: 900;
+                background: #f5f6f7;
+                outline: none;
+            }
+
+            .form-control {
+                width: 100px;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            #target {
+                margin: auto;
+                box-sizing: content-box;
+                background: #ffffff;
+                border-radius: 5px 5px 5px 5px;
+                height: 300px;
+                width: 300px;
+                padding: 30px;
+            }
+
+            #border-all { border: 5px solid black; }
+            #border-top { border-top: 5px solid black; }
+            #border-left { border-left: 5px solid black; }
+            #border-bottom { border-bottom: 5px solid black; }
+            #border-right { border-right: 5px solid black; }
+
+            .footer {
+                height: 500px;
+                background-color: lightblue;
+            }
+
+            .wrapper {
+                display: table;
+                margin: 0 auto;
+            }
+
+            .base {
+                box-sizing: content-box;
+                height: 300px;
+                width: 300px;
+                background: #ffffff;
+            }
+
+            /* radius */
+            #border-radius-design-one {
+                background: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%);
+                border-radius: 150px 0px 150px 0px;
+            }
+
+            #border-radius-design-two {
+                background: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
+                border-radius: 200px 200px 200px 200px;
+            }
+
+            #border-radius-design-three {
+                background: linear-gradient(135deg, #A1FFB4 10%, #FBE63B 55%);
+                border-radius: 225px 15px 225px 40px;
+            }
+
+            /* border */
+            #border-design-one {
+                border: 5px solid #FEE140;
+                animation-duration: 2s;
+                animation-name: animateOne;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            }
+
+            /* #border-design-one:hover {
+                animation-duration: 2s;
+                animation-name: animateOne;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+            } */
+
+            @keyframes animateOne {
+                50%  { border: 5px solid #FA709A; }
+                100% { border: 5px solid #FEE140; }
+            }
+
+            #border-design-two {
+                border: 10px solid transparent;
+                border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));
+                border-image-slice: 1;
+                border-image-width: 4px;
+            }
+
+            #border-design-three {
+                border: 5px solid red;
+            }
+
+            #border-design-three:hover {
+                animation-duration: 2s;
+                animation-name: animateThree;
+                /* animation-iteration-count: infinite; */
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes animateThree {
+                25%  { border-radius: 100px 0px 0px 0px; }
+                50%  { border-radius: 100px 100px 0px 0px; }
+                75%  { border-radius: 100px 100px 100px 0px; }
+                100% { border-radius: 100px 100px 100px 100px; }
+            }
+
+            #border-design-four {
+                box-sizing: content-box;
+                height: 300px;
+                width: 300px;
+                background: #ffffff;
+                transition: box-shadow 0.6s linear;
+
+                border: 5px solid #3cd3a0;
+            }
+
+            #border-design-four:hover {
+                box-shadow: 0px 0px 0px 10px #3cd3a0;
+            }
+
+            #border-design-five {
+                border: 5px solid black;
+                border-radius: 50% 20% / 10% 40%;
+
+                animation-duration: 2s;
+                animation-name: animateFive;
+                animation-iteration-count: infinite;
+                animation-timing-function: ease-in-out;
+                animation-fill-mode: forwards;
+            }
+
+            @keyframes animateFive {
+                50% { border-radius: 10% 40% / 50% 20%; }
+                100% { border-radius: 50% 20% / 10% 40%; }
+            }
+
+            #preview-shadow {
+                height: 175px;
+                width: 90px;
+                background-color: white;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                margin-right: 30px;
+                margin-left: 5px;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div class="container pt-3 pb-2">
+            <h1>CSS Border (Beta)</h1>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div id="controls" class="card col-5">
+                    <div class="container">
+                        <h3>Width</h3>
+                        <input id="border-width" class="" type="range" min="1" max="200" value="5">
+                        <span id="border-width-value" class="range-value">0</span>
+
+                        <h3>Border Style</h3>
+                        <select id="border-style" class="form-control">
+                            <option>solid</option>
+                            <option>dotted</option>
+                            <option>dashed</option>
+                            <option>double</option>
+                            <option>groove</option>
+                            <option>ridge</option>
+                            <option>inset</option>
+                            <option>outset</option>
+                            <option>hidden</option>
+                            <option>none</option>
+                        </select>
+
+                        <h3>Border Color (TBA)</h3> <br>
+
+                        <h3>Border Position</h3>
+                        <button id="border-all" type="button" class="btn control-btn">All</button>
+                        <button id="border-top" type="button" class="btn control-btn">Top</button>
+                        <button id="border-right" type="button" class="btn control-btn">Right</button>
+                        <button id="border-bottom" type="button" class="btn control-btn">Bottom</button>
+                        <button id="border-left" type="button" class="btn control-btn">Left</button>
+
+                        <h3>Border Radius</h3>
+                        <input id="border-radius-top-left" class="" type="range" min="1" max="250" value="5">
+                        <span id="border-radius-top-left-value" class="range-value">5</span>
+                        <input id="border-radius-top-right" class="" type="range" min="1" max="250" value="5">
+                        <span id="border-radius-top-right-value" class="range-value">5</span>
+                        <input id="border-radius-bot-left" class="" type="range" min="1" max="250" value="5">
+                        <span id="border-radius-bot-left-value" class="range-value">5</span>
+                        <input id="border-radius-bot-right" class="" type="range" min="1" max="250" value="5">
+                        <span id="border-radius-bot-right-value" class="range-value">5</span>
+                    </div>
+                </div>
+                <div class="col-7">
+                    <div id="target"></div>
+                    <pre>
+                        <code id="border-css" class="card mt-5"></code>
+                    </pre>
+                </div>
+            </div> <!-- row -->
+
+            <hr>
+            <h1>Examples</h1>
+
+            <!-- radius -->
+            <div class="row">
+                <div class="wrapper">
+                    <div id="border-radius-design-one" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            background: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%);
+                            border-radius: 150px 0px 150px 0px;
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <div class="wrapper">
+                    <div id="border-radius-design-two" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            background: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
+                            border-radius: 200px 200px 200px 200px;
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <div class="wrapper">
+                    <div id="border-radius-design-three" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            background: linear-gradient(135deg, #A1FFB4 10%, #FBE63B 55%);
+                            border-radius: 225px 15px 225px 40px;
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <!-- border -->
+                <div class="wrapper">
+                    <div id="border-design-one" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            border: 5px solid #FEE140;
+                            animation-duration: 2s;
+                            animation-name: animate;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: ease-in-out;
+                        }
+                        @keyframes animate {
+                            50%  { border: 5px solid #FA709A; }
+                            100% { border: 5px solid #FEE140; }
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <div class="wrapper">
+                    <div id="border-design-two" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            border: 10px solid transparent;
+                            border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));;
+                            border-image-slice: 1;
+                            border-image-width: 4px;
+                        }
+                        ">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="border-design-three" class="base">
+                        <h3 class="text-center">Hover Me!</h3>
+                    </div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            border: 5px solid red;
+                        }
+
+                        .border:hover {
+                            animation-duration: 2s;
+                            animation-name: animate;
+                            /* animation-iteration-count: infinite; */
+                            animation-timing-function: ease-in-out;
+                            animation-fill-mode: forwards;
+                        }
+
+                        @keyframes animate {
+                            25%  { border-radius: 100px 0px 0px 0px; }
+                            50%  { border-radius: 100px 100px 0px 0px; }
+                            75%  { border-radius: 100px 100px 100px 0px; }
+                            100% { border-radius: 100px 100px 100px 100px; }
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <div class="wrapper">
+                    <div id="border-design-four" class="base">
+                        <h3 class="text-center">Hover Me!</h3>
+                    </div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            box-sizing: content-box;
+                            height: 300px;
+                            width: 300px;
+                            background: #ffffff;
+                            transition: box-shadow 0.6s linear;
+
+                            border: 5px solid #3cd3a0;
+                        }
+
+                        .border:hover {
+                            box-shadow: 0px 0px 0px 10px #3cd3a0;
+                        }
+                        ">code</i>
+                </div> <!-- wrapper -->
+
+                <div class="wrapper">
+                    <div id="border-design-five" class="base"></div>
+                    <i class="material-icons code" code=
+                        "
+                        .border {
+                            border: 5px solid black;
+                            border-radius: 50% 20% / 10% 40%;
+
+                            animation-duration: 2s;
+                            animation-name: animate;
+                            animation-iteration-count: infinite;
+                            animation-timing-function: ease-in-out;
+                            animation-fill-mode: forwards;
+                        }
+
+                        @keyframes animate {
+                            50% { border-radius: 10% 40% / 50% 20%; }
+                            100% { border-radius: 50% 20% / 10% 40%; }
+                        }
+                        ">code</i>
+                </div>  <!-- wrapper -->
+            </div>
+        </div>  <!-- row -->
+
+        <div class="container">
+            <pre>
+                <code id="snippet" class="card mt-5">
+            border: 2px solid #076bff;
+            border-radius: 5px 5px 5px 5px;
+                </code>
+            </pre>
+        </div>
+
+        <div id="otherCSSFeatures" class="container">
+
+        </div> <!-- container -->
+
+        <script type="text/javascript" src="asset/shadowPreview.js"></script>
+        <script type="text/javascript" src="asset/colourPreview.js"></script>
+        <script>
+            document.getElementById('otherCSSFeatures').appendChild(generateShadowPreview('float-left'));
+            document.getElementById('otherCSSFeatures').appendChild(generateColourPreview('float-right'));
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="script/border.js"></script>
+    </body>
+    </html>

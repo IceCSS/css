@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <link type="text/css" href="style.css" rel="stylesheet">
+        <style>
+            .control-btn {
+                background: #f5f6f7;
+                outline: none;
+            }
+
+            .form-control {
+                width: 100px;
+                display: inline-block;
+                margin: 5px;
+            }
+
+            #target {
+                margin: auto;
+                box-sizing: content-box;
+                background: #ffffff;
+                border-radius: 5px 5px 5px 5px;
+                height: 300px;
+                width: 300px;
+                padding: 30px;
+            }
+
+            .wrapper {
+                display: table;
+                margin: 0 auto;
+            }
+
+            .base {
+                box-sizing: content-box;
+                height: 300px;
+                width: 300px;
+                background: #ffffff;
+            }
+
+            #preview-shadow {
+                height: 175px;
+                width: 90px;
+                background-color: white;
+                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+                margin-right: 30px;
+                margin-left: 5px;
+
+            }
+
+            .input-group {
+                /* height: 50px;
+                font-size: 40px;
+                color: black; */
+                /* display: flex; */
+
+            }
+
+            #colour-strip {
+                height: 40vh;
+                width: 100%;
+                display: flex;
+                font-size: 40px;
+                color: black;
+            }
+
+            .colour-input {
+                width: 80%;
+                font-size: 40px;
+                color: black;
+                background-color: transparent;
+                border: none;
+                border-bottom: 5px solid black;
+                margin-top: auto;
+                float: left;
+
+            }
+
+            .colour-input:focus {
+                background-color: transparent;
+                color: black;
+                border-bottom: 5px solid black;
+                outline: none;
+            }
+
+            #colour-search {
+                width: 20%;
+                float: left;
+                background-color: transparent;
+                border: none;
+                height: 50px;
+                margin-top: auto;
+                /* border-bottom: 5px solid black; */
+                line-height: 70%;
+            }
+
+            #colour-search:focus {
+                outline: none;
+            }
+
+            #colour-display {
+                height: 300px;
+                width: 300px;
+                border-radius: 10px;
+                background-color: white;
+            }
+
+            /* Examples */
+            #colour-plain-one { background-color: #85FFBD; }
+            #colour-plain-one:hover { box-shadow: 0px 0px 61px 2px #85FFBD; }
+            #colour-plain-two { background-color: #FF99AC; }
+            #colour-plain-two:hover { box-shadow: 0px 0px 61px 2px #FF99AC; }
+            #colour-plain-three { background-color: #FBDA61; }
+            #colour-plain-three:hover { box-shadow: 0px 0px 61px 2px #FBDA61; }
+            #colour-plain-four { background-color: #0093E9; }
+            #colour-plain-four:hover { box-shadow: 0px 0px 61px 2px #0093E9; }
+            #colour-plain-five { background-color: #e6e9f0; }
+            #colour-plain-five:hover { box-shadow: 0px 0px 61px 2px #e6e9f0; }
+            #colour-plain-six { background-color: #29323c; }
+            #colour-plain-six:hover { box-shadow: 0px 0px 61px 2px #29323c; }
+
+            #colour-gradient-one { background-image: linear-gradient(90deg, #FAD961 0%, #F76B1C 100%); }
+            #colour-gradient-two { background-image: linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%); }
+            #colour-gradient-three { background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%); }
+            #colour-gradient-four { background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%); }
+            #colour-gradient-five { background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); }
+
+
+        </style>
+
+    </head>
+    <body>
+        <div class="container pt-3 pb-2">
+            <h1>CSS Color (Beta)</h1>
+        </div>
+
+        <div id="colour-strip" class="">
+            <div class="input-group">
+                <input id="colour-rgb-input" class="form-control colour-input" type="text" value="rgb(248,241,101)" placeholder="rgb(248,241,101)">
+                <input id="colour-hex-input" class="form-control colour-input" type="text" value="" placeholder=""> <!-- #F8F165 -->
+                <button id="colour-search" type="button" name="button">@</button>
+            </div>
+        </div>
+
+        <div id="errorMsg" class="text-center"></div>
+
+        <div class="container pt-5">
+            <div class="row">
+                <div id="controls" class="card col-5">
+                    <h3>Red</h3>
+                    <input id="red-slider" class="" type="range" min="1" max="255" value="5">
+                    <span id="red-value"class="range-value">5</span>
+                    <h3>Green</h3>
+                    <input id="green-slider" class="" type="range" min="1" max="255" value="5">
+                    <span id="green-value"class="range-value">5</span>
+                    <h3>Blue</h3>
+                    <input id="blue-slider" class="" type="range" min="1" max="255" value="5">
+                    <span id="blue-value"class="range-value">5</span>
+                </div>
+                <div class="col-7">
+                    <div class="wrapper">
+                        <div id="colour-display" class="">
+                        </div>
+                    </div>
+                    <div class="wrapper">
+                        <code id="color-code" class=""></code>
+                    </div>
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+
+        <div class="container">
+            <hr>
+            <h1>Examples</h1>
+
+            <!-- radius -->
+            <div class="row">
+                <div class="wrapper">
+                    <div id="colour-plain-one" class="base"></div>
+                        <i class="material-icons code" code="#85FFBD">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-plain-two" class="base"></div>
+                        <i class="material-icons code" code="#FF99AC">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-plain-three" class="base"></div>
+                        <i class="material-icons code" code="#FBDA61">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-plain-four" class="base"></div>
+                        <i class="material-icons code" code="#0093E9">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-plain-five" class="base"></div>
+                        <i class="material-icons code" code="#e6e9f0">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-plain-six" class="base"></div>
+                        <i class="material-icons code" code="#29323c">code</i>
+                </div>
+
+                <!-- gradient -->
+                <div class="wrapper">
+                    <div id="colour-gradient-one" class="base"></div>
+                        <i class="material-icons code" code="linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-gradient-two" class="base"></div>
+                        <i class="material-icons code" code="linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%)">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-gradient-three" class="base"></div>
+                        <i class="material-icons code" code="linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%)">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-gradient-four" class="base"></div>
+                        <i class="material-icons code" code="linear-gradient( 135deg, #F05F57 10%, #360940 100%)">code</i>
+                </div>
+
+                <div class="wrapper">
+                    <div id="colour-gradient-five" class="base"></div>
+                        <i class="material-icons code" code="background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)">code</i>
+                </div>
+
+            </div>  <!-- row -->
+        </div> <!-- container -->
+
+
+        <div id="otherCSSFeatures" class="container">
+
+        </div> <!-- container -->
+
+        <script type="text/javascript" src="asset/shadowPreview.js"></script>
+        <script type="text/javascript" src="asset/borderPreview.js"></script>
+        <script>
+            document.getElementById('otherCSSFeatures').appendChild(generateShadowPreview('float-left'));
+            document.getElementById('otherCSSFeatures').appendChild(generateBorderPreview('float-right'));
+        </script>
+
+        <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+        <script type="text/javascript" src="script/colour.js"></script>
+    </body>
+    </html>

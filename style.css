@@ -1,0 +1,100 @@
+/* top right bottom left */
+
+:root {
+    --main-bg-color: #f5f6f7;
+    --main-font-color: #1f2667;
+}
+
+body {
+    font-family: "Work Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+    background-color: var(--main-bg-color);
+    color: var(--main-font-color);
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 1.8em;
+    /* margin: 10px 0 10px 50px; */
+}
+
+h3 {
+    font-weight: 900;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.4;
+    letter-spacing: 0.5px;
+}
+
+#controls {
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #dae0e6;
+    padding: 50px 0 0 40px;
+}
+
+/* Input Slider */
+input[type="range"]{
+    -webkit-appearance:none;
+    width: 75%;
+    height: 10px;
+
+    margin: 5px;
+    display: inline-block;
+    background: #f5f6f7;
+
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-thumb{
+    -webkit-appearance:none;
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+    background-image: linear-gradient(270deg, #2AF598 0%, #08AEEA 100%);
+
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,0.5);
+}
+
+.range-value {
+    font-weight: 900;
+    font-size: 1em;
+
+    line-height: 3.5;
+    letter-spacing: 1px;
+}
+
+
+/* Cards at the end */
+.preview-btn {
+    padding: 15px 35px 15px 35px;
+    background-color: #2AF598;
+    background-image: linear-gradient(270deg, #2AF598 0%, #08AEEA 100%);
+    color: white;
+    font-weight: 900;
+    border: 0;
+}
+
+.preview-btn a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.preview-btn a:hover {
+    outline: none;
+    text-decoration: none;
+    color: inherit;
+}
+
+.preview-btn:hover:active {
+    outline: none;
+    background-image: linear-gradient(270deg, #2AF598 0%, #08AEEA 100%);
+}
