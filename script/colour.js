@@ -88,3 +88,30 @@ blueSlider.addEventListener("input", () => {
 function displayRangeValue(range, value) {
     range.innerText = value;
 }
+
+// let previewBtns = document.getElementsByClassName('preview-btn');
+// for(let i = 0; i < previewBtns.length; i++) {
+//     // console.log(previewBtns[i]);
+//
+//     previewBtns[i].addEventListener("mouseover", () => {
+//         // console.log(previewBtns[i].children[1]);
+//         previewBtns[i].children[1].classList.add('move-arrow');
+//     });
+//
+//     previewBtns[i].addEventListener("mouseout", () => {
+//         // console.log(previewBtns[i].children[1]);
+//         previewBtns[i].children[1].classList.remove('move-arrow');
+//     });
+// }
+//
+// let shadowPreview = document.getElementById('preview-shadow-card');
+// shadowPreview.addEventListener("mouseover", () => {
+//     console.log('IN');
+//     document.getElementById('preview-shadow').classList.add('preview-shadow-hover');
+// });
+//
+// // let shadowPreview = document.getElementById('shadow-card');
+// shadowPreview.addEventListener("mouseout", () => {
+//     console.log('OUT');
+//     document.getElementById('preview-shadow').classList.remove('preview-shadow-hover');
+// });

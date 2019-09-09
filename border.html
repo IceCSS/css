@@ -149,14 +149,14 @@
                 100% { border-radius: 50% 20% / 10% 40%; }
             }
 
-            #preview-shadow {
+            /* #preview-shadow {
                 height: 175px;
                 width: 90px;
                 background-color: white;
                 box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
                 margin-right: 30px;
                 margin-left: 5px;
-            }
+            } */
         </style>
 
     </head>
@@ -164,6 +164,7 @@
         <div class="container pt-3 pb-2">
             <h1>CSS Border (Beta)</h1>
         </div>
+
         <div class="container">
             <div class="row">
                 <div id="controls" class="card col-5">
@@ -216,12 +217,11 @@
 
             <hr>
             <h1>Examples</h1>
-
             <!-- radius -->
             <div class="row">
                 <div class="wrapper">
                     <div id="border-radius-design-one" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             background: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%);
@@ -232,7 +232,7 @@
 
                 <div class="wrapper">
                     <div id="border-radius-design-two" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             background: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
@@ -243,7 +243,7 @@
 
                 <div class="wrapper">
                     <div id="border-radius-design-three" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             background: linear-gradient(135deg, #A1FFB4 10%, #FBE63B 55%);
@@ -255,7 +255,7 @@
                 <!-- border -->
                 <div class="wrapper">
                     <div id="border-design-one" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             border: 5px solid #FEE140;
@@ -273,7 +273,7 @@
 
                 <div class="wrapper">
                     <div id="border-design-two" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             border: 10px solid transparent;
@@ -288,7 +288,7 @@
                     <div id="border-design-three" class="base">
                         <h3 class="text-center">Hover Me!</h3>
                     </div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             border: 5px solid red;
@@ -315,7 +315,7 @@
                     <div id="border-design-four" class="base">
                         <h3 class="text-center">Hover Me!</h3>
                     </div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             box-sizing: content-box;
@@ -335,7 +335,7 @@
 
                 <div class="wrapper">
                     <div id="border-design-five" class="base"></div>
-                    <i class="material-icons code" code=
+                    <i class="fas fa-code" code=
                         "
                         .border {
                             border: 5px solid black;
@@ -354,9 +354,8 @@
                         }
                         ">code</i>
                 </div>  <!-- wrapper -->
-            </div>
-        </div>  <!-- row -->
-
+            </div> <!-- row -->
+        </div>  <!-- container -->
         <div class="container">
             <pre>
                 <code id="snippet" class="card mt-5">
@@ -377,10 +376,51 @@
             document.getElementById('otherCSSFeatures').appendChild(generateColourPreview('float-right'));
         </script>
 
+        <div class="footer card">
+            <div class="container pt-5">
+                <img id="footer-icon" src="logo/icon-footer.svg" height="60px" alt="">
+                <h1 class="footer-title p-3">IceCSS</h1>
+
+                <div class="row mt-5 mb-3">
+                    <div class="col">
+                        <h1 class="footer-title">ABOUT</h1>
+                        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. </p>
+                    </div>
+                    <div class="col pl-5">
+                        <h1 class="footer-title">PAGES</h1>
+                        <p class="footer-text"><a class="link" href="border.html">CSS Border</a></p>
+                        <p class="footer-text"><a class="link" href="index.html">RGB / HEX</a></p>
+                        <p class="footer-text"><a class="link" href="shadow.html">CSS Box Shadow</a></p>
+                    </div>
+                    <div class="col pl-5">
+                        <h1 class="footer-title">SOCIAL</h1>
+                        <div class="fa-2x">
+                            <a href="https://www.facebook.com/IceCss-113759786670650/"><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="made-with-love card text-center">
+                Made and designed with <i class="fas fa-heart"></i> in Sydney.
+            </div>
+        </div>
+
+        <a id="fixedMsg" href="https://www.facebook.com/IceCss-113759786670650/" class="new text-center p-2" target="_blank">
+            <i class="far fa-thumbs-up"></i> our new Facebook Page!
+        </a>
+
         <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="script/border.js"></script>
+        <script type="text/javascript" src="script/preview.js"></script>
     </body>
     </html>

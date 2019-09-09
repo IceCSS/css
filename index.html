@@ -2,12 +2,14 @@
 <html>
     <head>
         <title></title>
+        <link rel="icon" href="logo/favicon.png">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
         <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 
         <link type="text/css" href="style.css" rel="stylesheet">
         <style>
@@ -44,24 +46,6 @@
                 background: #ffffff;
             }
 
-            #preview-shadow {
-                height: 175px;
-                width: 90px;
-                background-color: white;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-                margin-right: 30px;
-                margin-left: 5px;
-
-            }
-
-            .input-group {
-                /* height: 50px;
-                font-size: 40px;
-                color: black; */
-                /* display: flex; */
-
-            }
-
             #colour-strip {
                 height: 40vh;
                 width: 100%;
@@ -96,13 +80,10 @@
                 border: none;
                 height: 50px;
                 margin-top: auto;
-                /* border-bottom: 5px solid black; */
                 line-height: 70%;
             }
 
-            #colour-search:focus {
-                outline: none;
-            }
+            #colour-search:focus { outline: none; }
 
             #colour-display {
                 height: 300px;
@@ -131,7 +112,6 @@
             #colour-gradient-four { background-image: linear-gradient( 135deg, #F05F57 10%, #360940 100%); }
             #colour-gradient-five { background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%); }
 
-
         </style>
 
     </head>
@@ -140,11 +120,11 @@
             <h1>CSS Color (Beta)</h1>
         </div>
 
-        <div id="colour-strip" class="">
+        <div id="colour-strip">
             <div class="input-group">
                 <input id="colour-rgb-input" class="form-control colour-input" type="text" value="rgb(248,241,101)" placeholder="rgb(248,241,101)">
                 <input id="colour-hex-input" class="form-control colour-input" type="text" value="" placeholder=""> <!-- #F8F165 -->
-                <button id="colour-search" type="button" name="button">@</button>
+                <button id="colour-search" type="button" name="button"><i class="fas fa-search"></i></button>
             </div>
         </div>
 
@@ -177,73 +157,70 @@
 
         <div class="container">
             <hr>
-            <h1>Examples</h1>
+            <h1>Examples (NOT IMPLEMENTED YET)</h1>
 
-            <!-- radius -->
             <div class="row">
                 <div class="wrapper">
                     <div id="colour-plain-one" class="base"></div>
-                        <i class="material-icons code" code="#85FFBD">code</i>
+                        <i class="fas fa-code" code="#85FFBD"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-plain-two" class="base"></div>
-                        <i class="material-icons code" code="#FF99AC">code</i>
+                        <i class="fas fa-code" code="#FF99AC"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-plain-three" class="base"></div>
-                        <i class="material-icons code" code="#FBDA61">code</i>
+                        <i class="fas fa-code" code="#FBDA61"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-plain-four" class="base"></div>
-                        <i class="material-icons code" code="#0093E9">code</i>
+                        <i class="fas fa-code" code="#0093E9"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-plain-five" class="base"></div>
-                        <i class="material-icons code" code="#e6e9f0">code</i>
+                        <i class="fas fa-code" code="#e6e9f0"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-plain-six" class="base"></div>
-                        <i class="material-icons code" code="#29323c">code</i>
+                        <i class="fas fa-code" code="#29323c"></i>
                 </div>
 
                 <!-- gradient -->
                 <div class="wrapper">
                     <div id="colour-gradient-one" class="base"></div>
-                        <i class="material-icons code" code="linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)">code</i>
+                        <i class="fas fa-code" code="linear-gradient(90deg, #FAD961 0%, #F76B1C 100%)"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-gradient-two" class="base"></div>
-                        <i class="material-icons code" code="linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%)">code</i>
+                        <i class="fas fa-code" code="linear-gradient(-20deg, #b721ff 0%, #21d4fd 100%)"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-gradient-three" class="base"></div>
-                        <i class="material-icons code" code="linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%)">code</i>
+                        <i class="fas fa-code" code="linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%)"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-gradient-four" class="base"></div>
-                        <i class="material-icons code" code="linear-gradient( 135deg, #F05F57 10%, #360940 100%)">code</i>
+                        <i class="fas fa-code" code="linear-gradient( 135deg, #F05F57 10%, #360940 100%)"></i>
                 </div>
 
                 <div class="wrapper">
                     <div id="colour-gradient-five" class="base"></div>
-                        <i class="material-icons code" code="background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)">code</i>
+                        <i class="fas fa-code" code="background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%)"></i>
                 </div>
-
             </div>  <!-- row -->
         </div> <!-- container -->
 
-
         <div id="otherCSSFeatures" class="container">
 
-        </div> <!-- container -->
+        </div>
 
         <script type="text/javascript" src="asset/shadowPreview.js"></script>
         <script type="text/javascript" src="asset/borderPreview.js"></script>
@@ -252,10 +229,50 @@
             document.getElementById('otherCSSFeatures').appendChild(generateBorderPreview('float-right'));
         </script>
 
+        <div class="footer card">
+            <div class="container pt-5">
+                <img id="footer-icon" src="logo/icon-footer.svg" height="60px" alt="">
+                <h1 class="footer-title p-3">IceCSS</h1>
+
+                <div class="row mt-5 mb-3">
+                    <div class="col">
+                        <h1 class="footer-title">ABOUT</h1>
+                        <p class="footer-text">IceCSS is a free service online that is intended to help
+                        everyone obtain easy and clean looking design for their webpage. It is still in Beta
+                        so if there is any problems feel free to message us on fb. This site will expand if
+                        people like you enjoy using our site. So don't forget to give us a like too! Have a great DAY!</p>
+                    </div>
+                    <div class="col pl-5">
+                        <h1 class="footer-title">PAGES</h1>
+                        <p class="footer-text"><a class="link" href="border.html">CSS Border</a></p>
+                        <p class="footer-text"><a class="link" href="index.html">RGB / HEX</a></p>
+                        <p class="footer-text"><a class="link" href="shadow.html">CSS Box Shadow</a></p>
+                    </div>
+                    <div class="col pl-5">
+                        <h1 class="footer-title">SOCIAL</h1>
+                        <div class="fa-2x">
+                            <a href="https://www.facebook.com/IceCss-113759786670650/"><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="made-with-love card text-center">
+                Made and designed with <i class="fas fa-heart"></i> in Sydney.
+            </div>
+        </div>
+
+        <a id="fixedMsg" href="https://www.facebook.com/IceCss-113759786670650/" class="new text-center p-2" target="_blank">
+            <i class="far fa-thumbs-up"></i> our new Facebook Page!
+        </a>
+
         <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
 
         <script type="text/javascript" src="script/colour.js"></script>
+        <script type="text/javascript" src="script/preview.js"></script>
     </body>
     </html>

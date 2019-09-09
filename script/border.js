@@ -257,14 +257,38 @@ for(let i = 0; i < codes.length; i++){
     })
 }
 
-let shadowPreview = document.getElementById('preview-shadow-card');
-shadowPreview.addEventListener("mouseover", () => {
-    document.getElementById('preview-shadow').style.boxShadow = "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)";
-
-});
-
-// let shadowPreview = document.getElementById('shadow-card');
-shadowPreview.addEventListener("mouseout", () => {
-    document.getElementById('preview-shadow').style.boxShadow = "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)";
-
-});
+// let shadowPreview = document.getElementById('preview-shadow-card');
+// shadowPreview.addEventListener("mouseover", () => {
+//     document.getElementById('preview-shadow').style.boxShadow = "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)";
+//
+// });
+//
+// // let shadowPreview = document.getElementById('shadow-card');
+// shadowPreview.addEventListener("mouseout", () => {
+//     document.getElementById('preview-shadow').style.boxShadow = "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)";
+// });
+// 
+// let previewBtns = document.getElementsByClassName('preview-btn');
+// for(let i = 0; i < previewBtns.length; i++) {
+//     // console.log(previewBtns[i]);
+//
+//     previewBtns[i].addEventListener("mouseover", () => {
+//         // console.log(previewBtns[i].children[1]);
+//         previewBtns[i].children[1].classList.add('move-arrow');
+//     });
+//
+//     previewBtns[i].addEventListener("mouseout", () => {
+//         // console.log(previewBtns[i].children[1]);
+//         previewBtns[i].children[1].classList.remove('move-arrow');
+//     });
+// }
+//
+// let shadowPreview = document.getElementById('preview-shadow-card');
+// shadowPreview.addEventListener("mouseover", () => {
+//     document.getElementById('preview-shadow').classList.add('preview-shadow-hover');
+// });
+//
+// // let shadowPreview = document.getElementById('shadow-card');
+// shadowPreview.addEventListener("mouseout", () => {
+//     document.getElementById('preview-shadow')..classList.remove('preview-shadow-hover');
+// });
