@@ -31,8 +31,7 @@ function generateColourPreview(position) {
     let h1 = document.createElement('h1');
     h1.appendChild(document.createTextNode(`RBG `));
     let i = document.createElement('i');
-    i.classList.add('material-icons', 'text-bold');
-    i.appendChild(document.createTextNode(`sync_alt`));
+    i.classList.add('fas', 'fa-exchange-alt');
     h1.appendChild(i);
     h1.appendChild(document.createTextNode(` HEX`));
     wrapper.appendChild(h1);
