@@ -77,13 +77,6 @@
                 animation-timing-function: ease-in-out;
             }
 
-            /* #border-design-one:hover {
-                animation-duration: 2s;
-                animation-name: animateOne;
-                animation-iteration-count: infinite;
-                animation-timing-function: ease-in-out;
-            } */
-
             @keyframes animateOne {
                 50%  { border: 5px solid #FA709A; }
                 100% { border: 5px solid #FEE140; }
@@ -145,14 +138,6 @@
                 100% { border-radius: 50% 20% / 10% 40%; }
             }
 
-            /* #preview-shadow {
-                height: 175px;
-                width: 90px;
-                background-color: white;
-                box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-                margin-right: 30px;
-                margin-left: 5px;
-            } */
         </style>
 
     </head>
@@ -205,9 +190,8 @@
                 </div>
                 <div class="col-7">
                     <div id="target"></div>
-                    <pre>
-                        <code id="border-css" class="card mt-5"></code>
-                    </pre>
+<pre id="border-css" class="p-3">
+</pre>
                 </div>
             </div> <!-- row -->
 
@@ -217,149 +201,149 @@
             <div class="row">
                 <div class="wrapper">
                     <div id="border-radius-design-one" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            background: linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%);
-                            border-radius: 150px 0px 150px 0px;
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
-
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">background</span>: <span class="text-blue">linear-gradient(135deg, #FAD7A1 10%, #E96D71 100%)</span>;
+        <span class="text-red">border-radius</span>: <span class="text-blue">150px 0px 150px 0px</span>;
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-radius-design-two" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            background: linear-gradient(135deg, #52E5E7 10%, #130CB7 100%);
-                            border-radius: 200px 200px 200px 200px;
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
-
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">background</span>: <span class="text-blue">linear-gradient(135deg, #52E5E7 10%, #130CB7 100%)</span>;
+        <span class="text-red">border-radius</span>: <span class="text-blue">200px 200px 200px 200px</span>;
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-radius-design-three" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            background: linear-gradient(135deg, #A1FFB4 10%, #FBE63B 55%);
-                            border-radius: 225px 15px 225px 40px;
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
-
-                <!-- border -->
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">background</span>: <span class="text-blue">linear-gradient(135deg, #A1FFB4 10%, #FBE63B 55%)</span>;
+        <span class="text-red">border-radius</span>: <span class="text-blue">225px 15px 225px 40px</span>;
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-design-one" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            border: 5px solid #FEE140;
-                            animation-duration: 2s;
-                            animation-name: animate;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: ease-in-out;
-                        }
-                        @keyframes animate {
-                            50%  { border: 5px solid #FA709A; }
-                            100% { border: 5px solid #FEE140; }
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">border</span>: <span class="text-blue">5px solid #FEE140</span>;
+        <span class="text-red">animation-duration</span>: <span class="text-blue">2s</span>;
+        <span class="text-red">animation-name</span>: <span class="text-blue">animate</span>;
+        <span class="text-red">animation-iteration-count</span>: <span class="text-blue">infinite</span>;
+        <span class="text-red">animation-timing-function</span>: <span class="text-blue">ease-in-out</span>;
+    }
 
+    <span class="text-purple">@keyframes</span> <span class="text-orange">animate</span> {
+        50%  { <span class="text-red">border</span>: <span class="text-blue">5px solid #FA709A</span>; }
+        100% { <span class="text-red">border</span>: <span class="text-blue">5px solid #FEE140</span>; }
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-design-two" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            border: 10px solid transparent;
-                            border-image: linear-gradient(to right, rgb(0, 210, 255), rgb(58, 123, 213));;
-                            border-image-slice: 1;
-                            border-image-width: 4px;
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div>
-
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">border</span>: <span class="text-blue">10px solid transparent</span>;
+        <span class="text-red">border-image</span>: <span class="text-blue">linear-gradient(to right, #00d2ff, #3a7bd5)</span>;
+        <span class="text-red">border-image-slice</span>: <span class="text-blue">1</span>;
+        <span class="text-red">border-image-width</span>: <span class="text-blue">4px</span>;
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-design-three" class="base">
                         <h3 class="text-center">Hover Me!</h3>
                     </div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            border: 5px solid red;
-                        }
-
-                        .border:hover {
-                            animation-duration: 2s;
-                            animation-name: animate;
-                            /* animation-iteration-count: infinite; */
-                            animation-timing-function: ease-in-out;
-                            animation-fill-mode: forwards;
-                        }
-
-                        @keyframes animate {
-                            25%  { border-radius: 100px 0px 0px 0px; }
-                            50%  { border-radius: 100px 100px 0px 0px; }
-                            75%  { border-radius: 100px 100px 100px 0px; }
-                            100% { border-radius: 100px 100px 100px 100px; }
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">border</span>: <span class="text-blue">5px solid red</span>;
+    }
 
+    <span class="text-orange">.border:hover</span> {
+        <span class="text-red">animation-duration</span>: <span class="text-blue">2s</span>;
+        <span class="text-red">animation-name</span>: <span class="text-blue">animate</span>;
+        /* animation-iteration-count: infinite; */
+        <span class="text-red">animation-timing-function</span>: <span class="text-blue">ease-in-out</span>;
+        <span class="text-red">animation-fill-mode</span>: <span class="text-blue">forwards</span>;
+    }
+
+    <span class="text-purple">@keyframes</span> <span class="text-orange">animate</span> {
+        25%  { <span class="text-red">border-radius</span>: <span class="text-blue">100px 0px 0px 0px</span>; }
+        50%  { <span class="text-red">border-radius</span>: <span class="text-blue">100px 100px 0px 0px</span>; }
+        75%  { <span class="text-red">border-radius</span>: <span class="text-blue">100px 100px 100px 0px</span>; }
+        100% { <span class="text-red">border-radius</span>: <span class="text-blue">100px 100px 100px 100px</span>; }
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-design-four" class="base">
                         <h3 class="text-center">Hover Me!</h3>
                     </div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            box-sizing: content-box;
-                            height: 300px;
-                            width: 300px;
-                            background: #ffffff;
-                            transition: box-shadow 0.6s linear;
-
-                            border: 5px solid #3cd3a0;
-                        }
-
-                        .border:hover {
-                            box-shadow: 0px 0px 0px 10px #3cd3a0;
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div> <!-- wrapper -->
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">box-sizing</span>: <span class="text-blue">content-box</span>;
+        <span class="text-red">height</span>: <span class="text-blue">300px</span>;
+        <span class="text-red">width</span>: <span class="text-blue">300px</span>;
+        <span class="text-red">background</span>: <span class="text-blue">#ffffff</span>;
+        <span class="text-red">transition</span>: <span class="text-blue">box-shadow 0.6s linear</span>;
 
+        <span class="text-red">border</span>: <span class="text-blue">5px solid #3cd3a0</span>;
+    }
+
+    <span class="text-orange">.border:hover</span> {
+        <span class="text-red">box-shadow</span>: <span class="text-blue">0px 0px 0px 10px #3cd3a0</span>;
+    }
+</pre>
+            </div>
+            <div class="row">
                 <div class="wrapper">
                     <div id="border-design-five" class="base"></div>
-                    <i class="fas fa-code" code=
-                        "
-                        .border {
-                            border: 5px solid black;
-                            border-radius: 50% 20% / 10% 40%;
-
-                            animation-duration: 2s;
-                            animation-name: animate;
-                            animation-iteration-count: infinite;
-                            animation-timing-function: ease-in-out;
-                            animation-fill-mode: forwards;
-                        }
-
-                        @keyframes animate {
-                            50% { border-radius: 10% 40% / 50% 20%; }
-                            100% { border-radius: 50% 20% / 10% 40%; }
-                        }
-                        ">code</i>
+                    <i class="fas fa-code" code=""></i>
                 </div>  <!-- wrapper -->
+<pre class="css-code p-3">
+    <span class="text-orange">.border</span> {
+        <span class="text-red">border</span>: <span class="text-blue">5px solid black</span>;
+        <span class="text-red">border-radius</span>: <span class="text-blue">50% 20% / 10% 40%</span>;
+
+        <span class="text-red">animation-duration</span>: <span class="text-blue">2s</span>;
+        <span class="text-red">animation-name</span>: <span class="text-blue">animate</span>;
+        <span class="text-red">animation-iteration-count</span>: <span class="text-blue">infinite</span>;
+        <span class="text-red">animation-timing-function</span>: <span class="text-blue">ease-in-out</span>;
+        <span class="text-red">animation-fill-mode</span>: <span class="text-blue">forwards</span>;
+    }
+
+    <span class="text-purple">@keyframes</span> <span class="text-orange">animate</span> {
+        50% { <span class="text-red">border-radius</span>: <span class="text-blue">10% 40% / 50% 20%</span>; }
+        100% { <span class="text-red">border-radius</span>: <span class="text-blue">50% 20% / 10% 40%</span>; }
+    }
+</pre>
             </div> <!-- row -->
         </div>  <!-- container -->
-        <div class="container">
-            <pre>
-                <code id="snippet" class="card mt-5">
-            border: 2px solid #076bff;
-            border-radius: 5px 5px 5px 5px;
-                </code>
-            </pre>
-        </div>
+
 
         <div id="otherCSSFeatures" class="container">
 
@@ -380,11 +364,10 @@
                 <div class="row mt-5 mb-3">
                     <div class="col">
                         <h1 class="footer-title">ABOUT</h1>
-                        <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit, sed do eiusmod tempor incididunt ut labore et
-                            dolore magna aliqua. Ut enim ad minim veniam, quis
-                            nostrud exercitation ullamco laboris nisi ut aliquip
-                            ex ea commodo consequat. </p>
+                        <p class="footer-text">IceCSS is a free service online that is intended to help
+                        everyone obtain easy and clean looking design for their webpage. It is still in Beta
+                        so if there is any problems feel free to message us on fb. This site will expand if
+                        people like you enjoy using our site. So don't forget to give us a like too! Have a great DAY!</p>
                     </div>
                     <div class="col pl-5">
                         <h1 class="footer-title">PAGES</h1>

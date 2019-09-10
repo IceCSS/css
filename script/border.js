@@ -1,4 +1,4 @@
-let borderType = 'all';
+let borderType = 'border';
 
 let target = document.getElementById('target');
 let css = document.getElementById('css');
@@ -34,97 +34,24 @@ let borderBottom = document.getElementById('border-bottom');
 let borderLeft = document.getElementById('border-left');
 
 borderAll.addEventListener("click", () => {
-    changeBorder('all');
+    changeBorder('border');
 });
 
 borderTop.addEventListener("click", () => {
-    changeBorder('top');
+    changeBorder('border-top');
 });
 
 borderRight.addEventListener("click", () => {
-    changeBorder('right');
+    changeBorder('border-right');
 });
 
 borderBottom.addEventListener("click", () => {
-    changeBorder('bottom');
+    changeBorder('border-bottom');
 });
 
 borderLeft.addEventListener("click", () => {
-    changeBorder('left');
+    changeBorder('border-left');
 });
-
-function changeBorder(pos) {
-    target.style.border = ``;
-    switch (pos) {
-    case "all":
-        target.style.border = `
-            ${borderWidth.value}px
-            ${borderStyle.options[borderStyle.selectedIndex].text}
-            #076bff
-            `;
-        borderType = "all";
-        document.getElementById('border-css').innerText =
-        `
-        border: ${target.style.border};
-        border-radius: ${target.style.borderRadius}
-        `;
-        break;
-    case "top":
-        target.style.borderTop = `
-            ${borderWidth.value}px
-            ${borderStyle.options[borderStyle.selectedIndex].text}
-            #076bff
-            `;
-        borderType = "top";
-        document.getElementById('border-css').innerText =
-        `
-        border-top: ${target.style.borderTop};
-        border-radius: ${target.style.borderRadius}
-        `;
-        break;
-    case "right":
-        target.style.borderRight = `
-            ${borderWidth.value}px
-            ${borderStyle.options[borderStyle.selectedIndex].text}
-            #076bff
-            `;
-        borderType = "right";
-        document.getElementById('border-css').innerText =
-        `
-        border-right: ${target.style.borderRight};
-        border-radius: ${target.style.borderRadius}
-        `;
-        break;
-    case "bottom":
-        target.style.borderBottom = `
-            ${borderWidth.value}px
-            ${borderStyle.options[borderStyle.selectedIndex].text}
-            #076bff
-            `;
-        borderType = "bottom";
-        document.getElementById('border-css').innerText =
-        `
-        border-bottom: ${target.style.borderBottom};
-        border-radius: ${target.style.borderRadius}
-        `;
-        break;
-    case "left":
-        target.style.borderLeft = `
-            ${borderWidth.value}px
-            ${borderStyle.options[borderStyle.selectedIndex].text}
-            #076bff
-            `;
-        borderType = "left";
-        document.getElementById('border-css').innerText =
-        `
-        border-left: ${target.style.borderLeft};
-        border-radius: ${target.style.borderRadius}
-        `;
-        break;
-    }
-    console.log(borderType);
-    console.log(target);
-}
 
 /**
     BORDER RADIUS
@@ -140,155 +67,111 @@ var borderRadiusBotRightValue = document.getElementById("border-radius-bot-right
 
 borderRadiusTopLeft.addEventListener("input", () => {
     displayRangeValue(borderRadiusTopLeftValue, borderRadiusTopLeft.value);
-    changeBorderRadius(borderType);
+    changeBorder(borderType);
 });
 
 borderRadiusTopRight.addEventListener("input", () => {
     displayRangeValue(borderRadiusTopRightValue, borderRadiusTopRight.value);
-    changeBorderRadius(borderType);
+    changeBorder(borderType);
 });
 
 borderRadiusBotLeft.addEventListener("input", () => {
     displayRangeValue(borderRadiusBotLeftValue, borderRadiusBotLeft.value);
-    changeBorderRadius(borderType);
+    changeBorder(borderType);
 });
 
 borderRadiusBotRight.addEventListener("input", () => {
     displayRangeValue(borderRadiusBotRightValue, borderRadiusBotRight.value);
-    changeBorderRadius(borderType);
+    changeBorder(borderType);
 });
 
-function changeBorderRadius(pos) {
+function changeBorder(pos) {
     target.style.borderRadius = `
         ${borderRadiusTopLeft.value}px
         ${borderRadiusTopRight.value}px
         ${borderRadiusBotLeft.value}px
         ${borderRadiusBotRight.value}px
         `;
+    target.style.border = ``;
+    document.getElementById('border-css').innerText = ``;
         switch (pos) {
-        case "all":
+        case "border":
             target.style.border = `
                 ${borderWidth.value}px
                 ${borderStyle.options[borderStyle.selectedIndex].text}
                 #076bff
                 `;
-            borderType = "all";
-            document.getElementById('border-css').innerText =
-            `
-            border: ${target.style.border};
-            border-radius: ${target.style.borderRadius}
-            `;
+            borderType = "border";
+            // Color Correct Code
+            displayCode(borderType, target.style.border, target.style.borderRadius);
             break;
-        case "top":
+        case "border-top":
             target.style.borderTop = `
                 ${borderWidth.value}px
                 ${borderStyle.options[borderStyle.selectedIndex].text}
                 #076bff
                 `;
-            borderType = "top";
-            document.getElementById('border-css').innerText =
-            `
-            border-top: ${target.style.borderTop};
-            border-radius: ${target.style.borderRadius}
-            `;
+            borderType = "border-top";
+            displayCode(borderType, target.style.borderTop, target.style.borderRadius);
             break;
-        case "right":
+        case "border-right":
             target.style.borderRight = `
                 ${borderWidth.value}px
                 ${borderStyle.options[borderStyle.selectedIndex].text}
                 #076bff
                 `;
-            borderType = "right";
-            document.getElementById('border-css').innerText =
-            `
-            border-right: ${target.style.borderRight};
-            border-radius: ${target.style.borderRadius}
-            `;
+            borderType = "border-right";
+            displayCode(borderType, target.style.borderRight, target.style.borderRadius);
             break;
-        case "bottom":
+        case "border-bottom":
             target.style.borderBottom = `
                 ${borderWidth.value}px
                 ${borderStyle.options[borderStyle.selectedIndex].text}
                 #076bff
                 `;
-            borderType = "bottom";
-            document.getElementById('border-css').innerText =
-            `
-            border-bottom: ${target.style.borderBottom};
-            border-radius: ${target.style.borderRadius}
-            `;
+            borderType = "border-bottom";
+            displayCode(borderType, target.style.borderBottom, target.style.borderRadius);
             break;
-        case "left":
+        case "border-left":
             target.style.borderLeft = `
                 ${borderWidth.value}px
                 ${borderStyle.options[borderStyle.selectedIndex].text}
                 #076bff
                 `;
-            borderType = "left";
-            document.getElementById('border-css').innerText =
-            `
-            border-left: ${target.style.borderLeft};
-            border-radius: ${target.style.borderRadius}
-            `;
+            borderType = "border-left";
+            displayCode(borderType, target.style.borderLeft, target.style.borderRadius);
             break;
         }
-    // console.log('Border');
-    // console.log(target.style.border);
-    // console.log(target.style.borderRadius);
-    // document.getElementById('border-css').innerText =
-    // `
-    // border: ${target.style.border};
-    // border-radius: ${target.style.borderRadius}
-    // `;
 }
 
-/**
-border-top
-border-left
-border-bottom
-border-right
- */
+function displayCode(type, border, borderRadius) {
+    let b = document.createElement('span');
+    b.classList.add('text-red');
+    b.appendChild(document.createTextNode(`${type}`));
+    document.getElementById('border-css').appendChild(b);
 
-let codes = document.getElementsByClassName('code');
-for(let i = 0; i < codes.length; i++){
-    codes[i].addEventListener("click", () => {
-        console.log(codes[i].getAttribute("code").replace(/^\s*/gm, "").replace(/^([^\.\@\#\}])/gm, "\t$1"));
-        document.getElementById('snippet').innerText = `${codes[i].getAttribute("code").replace(/^\s*/gm, "").replace(/^([^\.\@\#\}])/gm, "\t$1")}`;
-    })
+    document.getElementById('border-css').appendChild(document.createTextNode(`: `));
+
+    let bVal = document.createElement('span');
+    bVal.classList.add('text-blue');
+    bVal.appendChild(document.createTextNode(`${border}`));
+    document.getElementById('border-css').appendChild(bVal);
+    document.getElementById('border-css').appendChild(document.createTextNode(`;`));
+
+
+    let newLine = document.createElement('br');
+    document.getElementById('border-css').appendChild(newLine);
+
+    let bR = document.createElement('span');
+    bR.classList.add('text-red');
+    bR.appendChild(document.createTextNode('border-radius'));
+    document.getElementById('border-css').appendChild(bR);
+
+    document.getElementById('border-css').appendChild(document.createTextNode(`: `));
+
+    let bRVal = document.createElement('span');
+    bRVal.classList.add('text-blue');
+    bRVal.appendChild(document.createTextNode(`${borderRadius}`));
+    document.getElementById('border-css').appendChild(bRVal);
+    document.getElementById('border-css').appendChild(document.createTextNode(`;`));
 }
-
-// let shadowPreview = document.getElementById('preview-shadow-card');
-// shadowPreview.addEventListener("mouseover", () => {
-//     document.getElementById('preview-shadow').style.boxShadow = "0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)";
-//
-// });
-//
-// // let shadowPreview = document.getElementById('shadow-card');
-// shadowPreview.addEventListener("mouseout", () => {
-//     document.getElementById('preview-shadow').style.boxShadow = "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)";
-// });
-// 
-// let previewBtns = document.getElementsByClassName('preview-btn');
-// for(let i = 0; i < previewBtns.length; i++) {
-//     // console.log(previewBtns[i]);
-//
-//     previewBtns[i].addEventListener("mouseover", () => {
-//         // console.log(previewBtns[i].children[1]);
-//         previewBtns[i].children[1].classList.add('move-arrow');
-//     });
-//
-//     previewBtns[i].addEventListener("mouseout", () => {
-//         // console.log(previewBtns[i].children[1]);
-//         previewBtns[i].children[1].classList.remove('move-arrow');
-//     });
-// }
-//
-// let shadowPreview = document.getElementById('preview-shadow-card');
-// shadowPreview.addEventListener("mouseover", () => {
-//     document.getElementById('preview-shadow').classList.add('preview-shadow-hover');
-// });
-//
-// // let shadowPreview = document.getElementById('shadow-card');
-// shadowPreview.addEventListener("mouseout", () => {
-//     document.getElementById('preview-shadow')..classList.remove('preview-shadow-hover');
-// });

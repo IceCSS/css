@@ -45,6 +45,9 @@ p {
     border: 1px solid #dae0e6;
     padding: 50px 0 0 40px;
 }
+#border-css {
+    width: 100%;
+}
 
 /*
  *  Input Range
@@ -169,7 +172,7 @@ input[type="range"]::-webkit-slider-thumb{
     - Header
     - Made With Love
  */
- 
+
  /* General */
 .footer {
     border: 0;
@@ -217,4 +220,30 @@ input[type="range"]::-webkit-slider-thumb{
   	right: 10px;
     color: white;
     z-index: 5;
+}
+
+/* Code */
+.css-code {
+    display: none;
+    animation: fade-in 1s;
+}
+
+pre {
+    /* font-size: 16px; */
+    background-color: #282c35;
+    color: #aab1bf;
+    border-radius: 10px;
+
+    width: 800px;
+    /* height: 296px; */
+}
+
+.text-orange { color: #c18a59; }
+.text-red { color: #f25d6d; }
+.text-blue { color: #16b9c5; }
+.text-purple { color: #d761dc; }
+
+@keyframes fade-in {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }

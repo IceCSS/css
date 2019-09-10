@@ -46,19 +46,17 @@ function displayRangeValue(range, value) {
 function changeBoxShadow() {
     shadowBox.style.boxShadow = `${horizontalSlider.value}px ${verticalSlider.value}px ${blurSlider.value}px ${spreadSlider.value}px rgba(0,0,0,${opacitySlider.value/100})`;
     // console.log(`${horizontalSlider.value} ${verticalSlider.value} 0px 0px rgba(0,0,0,0.75)`);
-}
+    document.getElementById('border-css').innerText = ``;
+    let s = document.createElement('span');
+    s.classList.add('text-red');
+    s.appendChild(document.createTextNode('box-shadow'));
+    document.getElementById('border-css').appendChild(s);
 
-// let previewBtns = document.getElementsByClassName('preview-btn');
-// for(let i = 0; i < previewBtns.length; i++) {
-//     // console.log(previewBtns[i]);
-//
-//     previewBtns[i].addEventListener("mouseover", () => {
-//         // console.log(previewBtns[i].children[1]);
-//         previewBtns[i].children[1].classList.add('move-arrow');
-//     });
-//
-//     previewBtns[i].addEventListener("mouseout", () => {
-//         // console.log(previewBtns[i].children[1]);
-//         previewBtns[i].children[1].classList.remove('move-arrow');
-//     });
-// }
+    document.getElementById('border-css').appendChild(document.createTextNode(`: `));
+
+    let sVal = document.createElement('span');
+    sVal.classList.add('text-blue');
+    sVal.appendChild(document.createTextNode(`${shadowBox.style.boxShadow}`));
+    document.getElementById('border-css').appendChild(sVal);
+    document.getElementById('border-css').appendChild(document.createTextNode(`;`));
+}
